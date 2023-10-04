@@ -7,8 +7,8 @@
 </head>
 <body>
     <?php
-    $conn=mysqli_connect('localhost','root','','tbl_student');
-    $rs=mysqli_query($conn,"select * from bca");
+    $conn=mysqli_connect('localhost','root','','std_info');
+    $rs=mysqli_query($conn,"select * from info");
     if(mysqli_num_rows($rs))    //It Is Return No.Of.Rows To Be Available...
     {
     ?>
@@ -20,7 +20,6 @@
         <tr>
             <td><?php echo $arr[0] ?></td>
             <td><?php echo $arr[1] ?></td>
-            <td><?php echo $arr[2] ?></td>
         </tr>
         <?php
         }

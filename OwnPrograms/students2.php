@@ -4,6 +4,7 @@ mysqli_select_db($conn,"std_info")or die("cannot connect Mysqli");
 if(isset($_REQUEST["mode"])=="save")
 {
     mysqli_query($conn,"insert into info values('".$_POST[reg]."','".$_POST[name]."')");
+    
     if(mysql_affected_rows($conn))
     {
         $_SESSION['msg']="saved successfully";
@@ -11,7 +12,7 @@ if(isset($_REQUEST["mode"])=="save")
     header("location:students2.php");
     die();
 }
-if(isset($_REQUEST["mode"])==" ")
+else
 {
 ?>
 <html>
